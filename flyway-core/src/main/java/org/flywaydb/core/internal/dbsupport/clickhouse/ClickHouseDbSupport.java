@@ -60,7 +60,7 @@ public class ClickHouseDbSupport extends DbSupport {
     @Override
     public String getCurrentUserFunction() {
         // ClickHouse doesn't appear to have any concept of users
-        return "null";
+        return null;
     }
 
     @Override

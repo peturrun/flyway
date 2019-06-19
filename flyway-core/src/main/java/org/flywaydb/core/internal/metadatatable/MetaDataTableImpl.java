@@ -230,13 +230,14 @@ public class MetaDataTableImpl implements MetaDataTable {
                                 + "," + dbSupport.quote("execution_time")
                                 + "," + dbSupport.quote("success")
                                 + ")"
-                                + " VALUES (?, ?, ?, ?, ?, ?, " + installedBy + ", ?, ?)",
+                                + " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
                         installedRank,
                         versionStr,
                         appliedMigration.getDescription(),
                         appliedMigration.getType().name(),
                         appliedMigration.getScript(),
                         appliedMigration.getChecksum(),
+                        installedBy,
                         appliedMigration.getExecutionTime(),
                         appliedMigration.isSuccess()
                 );
